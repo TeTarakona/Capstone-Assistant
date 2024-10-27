@@ -7,6 +7,8 @@ services:
       context: ./db
     volumes:
       - prio-todo:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
 volumes:
   prio-todo:
 
