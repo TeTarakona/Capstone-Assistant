@@ -1,7 +1,14 @@
 version: "3"
 services:
   # client:
-  # server:
+  server:
+    build: 
+      context: ./server
+    ports:
+      - "5001:5000"
+    environment:
+      - PGDATABASE=postgres
+      - PGHOST=db
   db:
     build: 
       context: ./db
