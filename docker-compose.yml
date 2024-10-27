@@ -1,0 +1,14 @@
+version: "3"
+services:
+  # client:
+  # server:
+  db:
+    build: 
+      context: ./db
+    volumes:
+      - prio-todo:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+volumes:
+  prio-todo:
+
