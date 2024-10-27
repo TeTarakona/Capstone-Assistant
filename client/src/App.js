@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <>
-    <p>An otherwise empty application...</p>
+    <p>An otherwise empty application...Unless...Haha, just kidding...Unless?</p>
     </>
   );
 }
