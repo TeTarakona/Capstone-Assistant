@@ -1,1 +1,3 @@
 # Capstone-Assistant
+
+To run: docker compose up
