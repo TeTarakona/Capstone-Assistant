@@ -24,6 +24,15 @@ app.post("/todo", async (req, res) => {
     } catch (error) {
         console.error(err.message)
     }
+
+    app.get("/todo", async (req, res) => {
+        try {
+            const todos = await Pool.query("SELECT * FROM todo")
+            res.json(todos)
+        } catch (error) {
+            console.error(err.message)
+        }
+    })
 })
 
 module.exports = app;
