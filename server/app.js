@@ -40,4 +40,14 @@ app.get("/todo", async (req, res) => {
   }
 });
 
+app.put("/todo/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { description } = req.body
+    const update = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2", [description, id])
+  } catch (error) {
+    console.error(error.message)
+  }
+});
+
 module.exports = app;
