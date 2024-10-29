@@ -1,10 +1,12 @@
 import React from "react"
 import './App.css';
 
+import AddTask from "./components/AddTask"
+
 function App() {
   return (
     <>
-    <p>An otherwise empty application...Unless...Haha, just kidding...Unless?</p>
+    <AddTask />
     </>
   );
 }
