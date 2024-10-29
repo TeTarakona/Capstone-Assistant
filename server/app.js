@@ -34,7 +34,7 @@ app.get("/todo", async (req, res) => {
     console.log("DB Host:", process.env.host);
     console.log("DB Name:", process.env.database);
     const todos = await pool.query("SELECT * FROM todo");
-    res.json(todos);
+    res.json(todos.rows);
   } catch (error) {
     console.error(error.message);
   }
