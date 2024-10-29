@@ -6,7 +6,7 @@ const pool = require("./db");
 
 //Middleware
 app.use(cors());
-app.use(express.json()); //This line makes it easier to access information in the request
+app.use(express.json()); //Lets express read JSON
 
 app.get("/", async (req, res) => {
   res.json({ message: "Welcome to Alec's capstone project" });
