@@ -33,8 +33,8 @@ app.get("/todo", async (req, res) => {
   try {
     console.log("DB Host:", process.env.host);
     console.log("DB Name:", process.env.database);
-    const todos = await pool.query("SELECT * FROM todo");
-    res.json(todos.rows);
+    const getTodos = await pool.query("SELECT * FROM todo");
+    res.json(getTodos.rows);
   } catch (error) {
     console.error(error.message);
   }
@@ -44,10 +44,19 @@ app.put("/todo/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const { description } = req.body
-    const update = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2", [description, id])
+    const updateItem = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2", [description, id])
   } catch (error) {
     console.error(error.message)
   }
 });
+
+app.delete("/todo/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleteItem = await pool.query("DELETE FROM todo WHERE todo_id = $1", [id])
+  } catch (error) {
+    console.error(error.message)
+  }
+})
 
 module.exports = app;
