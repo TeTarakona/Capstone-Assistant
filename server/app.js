@@ -45,6 +45,7 @@ app.put("/todo/:id", async (req, res) => {
     const { id } = req.params;
     const { description } = req.body
     const updateItem = await pool.query("UPDATE todo SET description = $1 WHERE todo_id = $2", [description, id])
+    res.json("List item updated successfully.")
   } catch (error) {
     console.error(error.message)
   }
@@ -54,6 +55,7 @@ app.delete("/todo/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const deleteItem = await pool.query("DELETE FROM todo WHERE todo_id = $1", [id])
+    res.json("List item deleted successfully.")
   } catch (error) {
     console.error(error.message)
   }
