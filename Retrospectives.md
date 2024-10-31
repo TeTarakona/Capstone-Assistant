@@ -1,0 +1,2 @@
+## Sprint 1
+The first sprint was largely a success! It didn't quite cover the entire scope that was laid out for it, but it still made an impressive amount of progress through the overall project timeline. It took the application from a barren repository to a functioning and dockerized PERN application. While that application has no user functionality yet, the ground work is laid for future sprints to pick up feature development at full steam. At this stage, flaws in planning were small enough to be worked out during development, as noted in the commit message history.
