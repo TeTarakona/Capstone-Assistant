@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 
+import EditTask from "./EditTask";
+
 const Tasklist = () => {
   const [tasks, setTasks] = useState([]);
 
   const deleteTask = async (id) => {
     try {
-        const deleteTask = await fetch(`http://localhost:5001/todo/${id}`, {
-            method: "DELETE"
-        })
-        setTasks(tasks.filter(task => task.todo_id !== id))
+      const deleteTask = await fetch(`http://localhost:5001/todo/${id}`, {
+        method: "DELETE",
+      });
+      setTasks(tasks.filter((task) => task.todo_id !== id));
     } catch (error) {
-        console.error(error.message)
+      console.error(error.message);
     }
-}
+  };
 
   const getTasks = async () => {
     try {
@@ -43,9 +45,11 @@ const Tasklist = () => {
           {tasks.map((task) => (
             <tr key={task.todo_id}>
               <td>{task.description}</td>
-              <td>Edit</td>
               <td>
-              <button onClick={() => deleteTask(task.todo_id)}>Delete</button>
+                <EditTask />
+              </td>
+              <td>
+                <button onClick={() => deleteTask(task.todo_id)}>Delete</button>
               </td>
             </tr>
           ))}
