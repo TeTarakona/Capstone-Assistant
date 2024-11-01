@@ -46,7 +46,7 @@ const Tasklist = () => {
             <tr key={task.todo_id}>
               <td>{task.description}</td>
               <td>
-                <EditTask />
+                <EditTask task={task} />
               </td>
               <td>
                 <button onClick={() => deleteTask(task.todo_id)}>Delete</button>
