@@ -1,10 +1,14 @@
 import React from "react"
 import './App.css';
 
+import AddTask from "./components/AddTask"
+import Tasklist from "./components/TaskList";
+
 function App() {
   return (
     <>
-    <p>An otherwise empty application...Unless...Haha, just kidding...Unless?</p>
+    <AddTask />
+    <Tasklist />
     </>
   );
 }
