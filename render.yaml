@@ -1,35 +1,33 @@
 version: 1
 
 services:
-  client:
-    type: web
+  - type: web
     name: client
     env: docker
-    buildCommand: npm install # Add any specific commands if needed
+    buildCommand: npm install
     startCommand: npm start
     dockerfilePath: ./client/Dockerfile
     autoDeploy: true
     envVars:
-      REACT_APP_API_URL: http://server:5000 # Points to the server service
+      REACT_APP_API_URL: http://server:5000
     healthCheckPath: /
 
-  server:
-    type: web
+  - type: web
     name: server
     env: docker
-    buildCommand: npm install # Adjust based on your server setup
+    buildCommand: npm install
     startCommand: npm start
     dockerfilePath: ./server/Dockerfile
     autoDeploy: true
     envVars:
       PGDATABASE: postgres
-      PGHOST: db # Points to the db service
+      PGHOST: db
     healthCheckPath: /
 
-  db:
-    type: db
+  - type: db
     name: database
     env: docker
-    dockerfilePath: ./db/Dockerfile # Path to the DB Dockerfile
+    dockerfilePath: ./db/Dockerfile
     volumes:
-      - prio-todo:/var/lib/postgresql/data # Ensure volume is correctly configured
+      - prio-todo:/var/lib/postgresql/data
+
