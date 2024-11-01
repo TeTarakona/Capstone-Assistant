@@ -24,7 +24,7 @@ services:
       PGHOST: db
     healthCheckPath: /
 
-  - type: db
+  - type: web
     name: database
     env: docker
     dockerfilePath: ./db/Dockerfile
