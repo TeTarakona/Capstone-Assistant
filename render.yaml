@@ -5,34 +5,31 @@ services:
     type: web
     name: client
     env: docker
-    buildCommand: npm install
+    buildCommand: npm install # Add any specific commands if needed
     startCommand: npm start
     dockerfilePath: ./client/Dockerfile
     autoDeploy: true
     envVars:
-      REACT_APP_API_URL: http://server:5000
+      REACT_APP_API_URL: http://server:5000 # Points to the server service
     healthCheckPath: /
 
   server:
     type: web
     name: server
     env: docker
-    buildCommand: npm install
+    buildCommand: npm install # Adjust based on your server setup
     startCommand: npm start
     dockerfilePath: ./server/Dockerfile
     autoDeploy: true
     envVars:
       PGDATABASE: postgres
-      PGHOST: db
+      PGHOST: db # Points to the db service
     healthCheckPath: /
 
   db:
     type: db
     name: database
     env: docker
-    buildCommand: npm install  # Not necessary for databases, adjust as needed
-    startCommand: # Your command to start the database (if applicable)
-    dockerfilePath: ./db/Dockerfile
-    autoDeploy: true
+    dockerfilePath: ./db/Dockerfile # Path to the DB Dockerfile
     volumes:
-      - prio-todo:/var/lib/postgresql/data
+      - prio-todo:/var/lib/postgresql/data # Ensure volume is correctly configured
