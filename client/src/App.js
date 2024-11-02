@@ -1,14 +1,15 @@
 import React, { useState } from "react"
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 
-import AddTask from "./components/AddTask"
-import Tasklist from "./components/TaskList";
+import TaskListPage from "./components/TaskListPage";
 
 function App() {
   return (
     <>
-    <AddTask />
-    <Tasklist />
+    <Routes>
+      <Route path="/tasklist" element={<TaskListPage />} />
+    </Routes>
     </>
   );
 }
