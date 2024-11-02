@@ -21,7 +21,7 @@ const EditTask = ({ task }) => {
     }
   };
 
-  const modalId = `id${task.todo_id}`;  ID
+  const modalId = `id${task.todo_id}`;
 
   return (
     <>
