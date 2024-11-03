@@ -12,7 +12,10 @@ const CalendarComponent = () => {
 
   return (
     <>
+      <div className="pageContainer">
+        <h1 className="heading">Calendar</h1>
       <Calendar onChange={onChange} value={value} />
+      </div>
     </>
   );
 };
