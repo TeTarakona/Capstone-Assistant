@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom"
 
 const Nav = () => {
   return (
@@ -6,8 +6,20 @@ const Nav = () => {
       <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
+            <ul>
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/notepad">Notepad</Link>
+                </li>
+                <li>
+                    <Link to="/tasklist">Task List</Link>
+                </li>
+                <li>
+                    <Link to="/calendar">Calendar</Link>
+                </li>
+            </ul>
           </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
