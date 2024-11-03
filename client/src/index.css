@@ -2,6 +2,9 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
 }
 
 .heading {
