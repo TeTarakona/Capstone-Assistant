@@ -10,7 +10,9 @@ const Tasklist = () => {
       const deleteTask = await fetch(`http://localhost:5001/todo/${id}`, {
         method: "DELETE",
       });
-      setTasks(tasks.filter((task) => task.todo_id !== id));
+      if (deleteTask.ok) {
+        window.location.reload(); 
+      }
     } catch (error) {
       console.error(error.message);
     }
