@@ -1,8 +1,10 @@
 import React from "react";
+import "./HomePage.css";
 
 const HomePage = () => {
     return(
         <>
+        <div className="pageContainer">
         <h1>Prio</h1>
         <p>The personal assistant app</p>
         <article>
@@ -11,6 +13,7 @@ const HomePage = () => {
             <p>Prio is in active development, meaning some features could be changed or updated as time goes on.</p>
             <p>The current goals are a task list, calendar, and notepad all in one place.</p>
         </article>
+        </div>
         </>
     )
 }
