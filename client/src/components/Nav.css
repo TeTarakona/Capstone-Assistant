@@ -1,0 +1,15 @@
+.menuBackground ul {
+    list-style-type: none;
+  }
+
+.menuBackground ul li {
+    margin: 1rem;
+}
+
+.navLink {
+    text-decoration: none;
+    color: black;
+    border: 0.3rem solid;
+    border-color: #4567B7;
+    padding: 0.5rem;
+  }
