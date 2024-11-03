@@ -9,4 +9,7 @@ body {
 
 .heading {
   font-family: 'Monstrrat';
+  margin: 0;
+  padding: 0 40%;
+  background-color: #4567B7;
 }

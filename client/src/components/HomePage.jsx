@@ -5,7 +5,7 @@ const HomePage = () => {
     return(
         <>
         <div className="pageContainer">
-        <h1>Prio</h1>
+        <h1 className="heading" >Prio</h1>
         <p>The personal assistant app</p>
         <article>
             <h2>Welcome to Prio</h2>
