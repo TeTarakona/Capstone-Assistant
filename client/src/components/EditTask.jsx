@@ -27,7 +27,7 @@ const EditTask = ({ task }) => {
     <>
       <button
         type="button"
-        className="btn btn-primary"
+        className="orangeButton"
         data-toggle="modal"
         data-target={`#${modalId}`}
       >

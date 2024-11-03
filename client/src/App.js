@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Routes, Route } from "react-router-dom";
-import './App.css';
 
 import TaskListPage from "./components/TaskListPage";
 import CalendarComponent from "./components/CalendarComponent"

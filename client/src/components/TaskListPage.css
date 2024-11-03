@@ -1,0 +1,28 @@
+.taskInput {
+    margin: 1%;
+}
+
+.taskInput input {
+    width: 80%;
+}
+
+.blueButton {
+    background-color: #4567B7;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0.1rem;
+}
+
+.orangeButton {
+    background-color: #FFB07B;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0.1rem;
+}
+
+.redButton {
+    background-color: #FF6C5C;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0.1rem;
+}

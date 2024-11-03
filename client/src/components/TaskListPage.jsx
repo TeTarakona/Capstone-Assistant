@@ -1,13 +1,18 @@
 import Tasklist from "./TaskList";
 import AddTask from "./AddTask";
 
+import "./TaskListPage.css"
+
 const TaskListPage = () => {
-return(
+  return (
     <>
-    <AddTask />
-    <Tasklist />
+      <div className="pageContainer">
+        <h1 className="heading">Task List</h1>
+        <AddTask />
+        <Tasklist />
+      </div>
     </>
-)
-}
+  );
+};
 
 export default TaskListPage;

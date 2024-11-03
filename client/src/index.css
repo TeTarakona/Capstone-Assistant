@@ -1,13 +1,24 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.heading {
+  font-family: 'Monstrrat';
+  margin: 0;
+  padding: 0 40%;
+  background-color: #4567B7;
+}
+
+.pageContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  width: 85%;
+  margin: 0 auto;
 }
