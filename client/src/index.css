@@ -13,3 +13,12 @@ body {
   padding: 0 40%;
   background-color: #4567B7;
 }
+
+.pageContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
