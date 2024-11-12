@@ -1,2 +1,5 @@
 ## Sprint 1
 The first sprint was largely a success! It didn't quite cover the entire scope that was laid out for it, but it still made an impressive amount of progress through the overall project timeline. It took the application from a barren repository to a functioning and dockerized PERN application. While that application has no user functionality yet, the ground work is laid for future sprints to pick up feature development at full steam. At this stage, flaws in planning were small enough to be worked out during development, as noted in the commit message history.
+
+## Sprint 2
+The second sprint focused on the front end of the application and brought it up to a standard of what I would consider to be a minimum viable product. While it may not have met all of its objectives, it largely succeeded in completing the usability and look of the front end which will make future development much more seamless. During this sprint, a pocket of time was spent trying to deploy the application to no avail. Because of that, the approach will have to be thought out again in an upcoming sprint.
